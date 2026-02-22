@@ -1,43 +1,59 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    color: white;
+    background: radial-gradient(circle at top, #000000, #020617);
+    color: #f1f5f9;
     overflow-x: hidden;
 }
 
-/* ⚡ effet éclair animé */
+/* 🌫️ Brouillard */
+.fog {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 60%);
+    animation: fogMove 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fogMove {
+    from { transform: translateX(-20%) translateY(-10%); }
+    to { transform: translateX(20%) translateY(10%); }
+}
+
+/* ⚡ éclair */
 .lightning {
     position: fixed;
     top: 0;
     left: 50%;
-    width: 2px;
+    width: 3px;
     height: 100vh;
     background: white;
     opacity: 0;
-    animation: flash 6s infinite;
+    animation: flash 7s infinite;
 }
 
 @keyframes flash {
-    0%, 95%, 100% { opacity: 0; }
-    96% { opacity: 1; }
-    97% { opacity: 0; }
-    98% { opacity: 1; }
-    99% { opacity: 0; }
+    0%, 96%, 100% { opacity: 0; }
+    97% { opacity: 1; }
+    98% { opacity: 0; }
+    99% { opacity: 1; }
 }
 
+/* header */
 header {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(90deg, #020617, #1e293b);
-    border-bottom: 2px solid #7c3aed;
-    box-shadow: 0 0 25px #7c3aed;
+    background: linear-gradient(90deg, #000000, #1a0f0f);
+    border-bottom: 2px solid #ff6b00;
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.6);
 }
 
 header h1 {
     margin: 0;
     font-size: 48px;
-    text-shadow: 0 0 20px #a855f7;
+    color: #ff6b00;
+    text-shadow: 0 0 20px #ff6b00;
 }
 
 .hero {
@@ -47,27 +63,37 @@ header h1 {
     margin: auto;
 }
 
+/* cartes */
 .card {
-    background: rgba(30, 41, 59, 0.6);
+    background: rgba(15, 23, 42, 0.75);
     margin: 30px auto;
     padding: 30px;
     border-radius: 15px;
     max-width: 900px;
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(124, 58, 237, 0.4);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+    border: 1px solid rgba(255, 107, 0, 0.4);
+    box-shadow: 0 0 25px rgba(255, 107, 0, 0.25);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 0 35px rgba(168, 85, 247, 0.7);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 40px rgba(255, 107, 0, 0.8);
 }
 
+/* signature Clara */
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #ff6b00;
+    margin-top: 15px;
+}
+
+/* footer */
 footer {
     text-align: center;
     padding: 30px;
     margin-top: 50px;
-    background: #020617;
-    border-top: 1px solid #7c3aed;
+    background: #000;
+    border-top: 1px solid #ff6b00;
 }
