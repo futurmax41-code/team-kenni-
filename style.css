@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ⚡ effet éclair animé */
+.lightning {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    animation: flash 6s infinite;
+}
+
+@keyframes flash {
+    0%, 95%, 100% { opacity: 0; }
+    96% { opacity: 1; }
+    97% { opacity: 0; }
+    98% { opacity: 1; }
+    99% { opacity: 0; }
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #020617, #1e293b);
+    border-bottom: 2px solid #7c3aed;
+    box-shadow: 0 0 25px #7c3aed;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    text-shadow: 0 0 20px #a855f7;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.6);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.7);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    background: #020617;
+    border-top: 1px solid #7c3aed;
+}
