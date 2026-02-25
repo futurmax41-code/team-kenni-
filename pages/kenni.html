@@ -2,55 +2,35 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Kenni l'Éternel</title>
+<title>Kenni — Boss Final</title>
 <link rel="stylesheet" href="../css/style.css">
-<style>
-body {
-    background: radial-gradient(circle at top, #000000, #020617);
-}
-
-.kenni-glow {
-    color: #a855f7;
-    text-shadow: 0 0 25px #a855f7;
-    font-size: 48px;
-}
-
-.aura {
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle, rgba(168,85,247,0.15), transparent 60%);
-    animation: pulse 4s infinite;
-    pointer-events: none;
-}
-
-@keyframes pulse {
-    0%,100% { opacity: .3; }
-    50% { opacity: .8; }
-}
-</style>
 </head>
 <body>
 
-<div class="aura"></div>
+<video class="bg-video" autoplay muted loop>
+  <source src="../assets/dark-bg.mp4" type="video/mp4">
+</video>
+
 <div class="lightning"></div>
 <div class="fog"></div>
 
 <section class="profile">
-<h1 class="kenni-glow">👑 Kenni l'Éternel Immortel</h1>
+<h1 class="glitch">👑 Kenni l'Éternel Immortel</h1>
 
 <p>
-Fondateur. Stratège. Légende vivante.
-Kenni ne suit pas le destin… il l’écrit.
-Depuis les profondeurs du temps, personne n’a réussi à l’arrêter.
-</p>
-
-<p>
+Fondateur absolu de la Team Kenni.
 Quand son aura apparaît, même l’ombre recule.
-La Team Kenni existe grâce à lui —
-et tant qu’il est là, la domination continue.
+Il ne suit pas le destin… il le contrôle.
 </p>
 
-<a href="../index.html">⬅ Retour à la base</a>
+<div class="power">
+<p>Puissance : 100%</p>
+<div class="power-bar">
+<div class="power-fill" style="width:100%"></div>
+</div>
+</div>
+
+<a href="../index.html">⬅ Retour</a>
 </section>
 
 <script src="../js/thunder.js"></script>
