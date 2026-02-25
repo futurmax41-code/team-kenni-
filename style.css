@@ -1,99 +1,77 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #000000, #020617);
-    color: #f1f5f9;
-    overflow-x: hidden;
+    background: #020617;
+    color: white;
 }
 
-/* 🌫️ Brouillard */
+/* ⚡ TONNERRE ÉCRAN */
+.lightning {
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 🌫️ brouillard */
 .fog {
     position: fixed;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 60%);
-    animation: fogMove 25s linear infinite;
-    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.04), transparent 60%);
+    animation: fogMove 30s linear infinite;
 }
 
 @keyframes fogMove {
-    from { transform: translateX(-20%) translateY(-10%); }
-    to { transform: translateX(20%) translateY(10%); }
-}
-
-/* ⚡ éclair */
-.lightning {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    width: 3px;
-    height: 100vh;
-    background: white;
-    opacity: 0;
-    animation: flash 7s infinite;
-}
-
-@keyframes flash {
-    0%, 96%, 100% { opacity: 0; }
-    97% { opacity: 1; }
-    98% { opacity: 0; }
-    99% { opacity: 1; }
+    from { transform: translate(-10%, -10%); }
+    to { transform: translate(10%, 10%); }
 }
 
 /* header */
 header {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(90deg, #000000, #1a0f0f);
-    border-bottom: 2px solid #ff6b00;
-    box-shadow: 0 0 30px rgba(255, 107, 0, 0.6);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 48px;
-    color: #ff6b00;
-    text-shadow: 0 0 20px #ff6b00;
+/* grille membres */
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    padding: 40px;
 }
 
-.hero {
+.member {
+    text-decoration: none;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-/* cartes */
-.card {
-    background: rgba(15, 23, 42, 0.75);
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 900px;
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 107, 0, 0.4);
-    box-shadow: 0 0 25px rgba(255, 107, 0, 0.25);
+    font-size: 22px;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 0 40px rgba(255, 107, 0, 0.8);
+/* 🎭 THEMES PAR PERSONNE */
+.member.kenni { background: linear-gradient(135deg,#7c3aed,#020617); }
+.member.clara { background: linear-gradient(135deg,#ff6b9d,#020617); }
+.member.louis { background: linear-gradient(135deg,#38bdf8,#020617); }
+.member.sonya { background: linear-gradient(135deg,#ff6b00,#020617); }
+
+.member:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
 }
 
-/* signature Clara */
-.signature {
-    text-align: right;
-    font-style: italic;
-    color: #ff6b00;
-    margin-top: 15px;
-}
-
-/* footer */
-footer {
+/* pages perso */
+.profile {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
     text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    background: #000;
-    border-top: 1px solid #ff6b00;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
 }
