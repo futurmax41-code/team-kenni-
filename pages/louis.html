@@ -4,54 +4,30 @@
 <meta charset="UTF-8">
 <title>Louis</title>
 <link rel="stylesheet" href="../css/style.css">
-<style>
-body {
-    background: radial-gradient(circle at top, #001018, #020617);
-}
-
-.speed-lines {
-    position: fixed;
-    inset: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 40px,
-        rgba(56,189,248,0.15) 42px
-    );
-    animation: move 2s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes move {
-    from { transform: translateX(0); }
-    to { transform: translateX(80px); }
-}
-
-.louis-glow {
-    color: #38bdf8;
-    text-shadow: 0 0 20px #38bdf8;
-    font-size: 42px;
-}
-</style>
 </head>
 <body>
 
-<div class="speed-lines"></div>
+<video class="bg-video" autoplay muted loop>
+  <source src="../assets/dark-bg.mp4" type="video/mp4">
+</video>
+
 <div class="lightning"></div>
 <div class="fog"></div>
 
 <section class="profile">
-<h1 class="louis-glow">⚡ Louis — L’Ombre Rapide</h1>
+<h1>⚡ Louis — L’Ombre Rapide</h1>
 
 <p>
-On ne voit jamais Louis arriver.
-Une seconde il n’est pas là… la suivante il a déjà frappé.
+Plus rapide que la foudre.
+Quand tu le vois… il est déjà trop tard.
 </p>
 
-<p>
-Maître de la vitesse et des attaques éclairs,
-il est l’arme surprise de la Team Kenni.
-</p>
+<div class="power">
+<p>Puissance : 95%</p>
+<div class="power-bar">
+<div class="power-fill" style="width:95%"></div>
+</div>
+</div>
 
 <a href="../index.html">⬅ Retour</a>
 </section>
