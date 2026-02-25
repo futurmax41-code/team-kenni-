@@ -4,19 +4,39 @@
 <meta charset="UTF-8">
 <title>Clara</title>
 <link rel="stylesheet" href="../css/style.css">
+<style>
+body {
+    background: radial-gradient(circle at top, #1a0f1f, #020617);
+}
+
+.clara-glow {
+    color: #ff6b9d;
+    text-shadow: 0 0 20px #ff6b9d;
+    font-size: 42px;
+}
+
+.sparkle {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,107,157,0.15), transparent 60%);
+    animation: pulse 3s infinite;
+    pointer-events: none;
+}
+</style>
 </head>
 <body>
 
+<div class="sparkle"></div>
 <div class="lightning"></div>
 <div class="fog"></div>
 
 <section class="profile">
-<h1>🌙 Clara — La Source de Bonne Humeur</h1>
+<h1 class="clara-glow">🌙 Clara — La Source de Bonne Humeur</h1>
 
 <p>
-Clara est la lumière de la Team Kenni. Toujours souriante,
-elle apporte la bonne humeur partout.
-Tout le monde l’apprécie… impossible de ne pas l’aimer.
+Clara est la lumière de la Team Kenni.
+Toujours souriante, toujours positive,
+elle met de la bonne vibe partout où elle passe.
 </p>
 
 <p>
@@ -28,7 +48,7 @@ c’est clairement elle qui attire le plus.
 
 <p>
 Son histoire ? Beaucoup trop fraîche pour ce monde…
-Certains disent qu’elle vient d’ailleurs.
+Une vraie énergie venue d’ailleurs.
 </p>
 
 <p class="signature">Bisous 💫</p>
